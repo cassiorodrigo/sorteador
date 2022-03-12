@@ -1,0 +1,35 @@
+<Main>:
+    FloatLayout:
+        MDTextFieldRound:
+            id: participantes
+            size_hint:None,None
+            write_tab: False
+            multiline: False
+            pos_hint: {"x": 0.105, "y": 0.885}
+            hint_text: "Numero de participantes"
+
+#        MDTextFieldRound:
+#            write_tab: False
+#            multiline: False
+
+        MDLabel:
+            id: resultado
+            text: "Resultado"
+            theme_text_color:"Error"
+            font_size:60
+            size_hint:0.5,0.25
+            write_tab: False
+            multiline: False
+            pos_hint: {"x": 0.25, "y": 0.5}
+            hint_text: "Numero de participantes"
+            halign: 'center'
+            valign: 'center'
+
+        MDIconButton:
+            icon: "dice-6"
+            size_hint: None, None
+            pos_hint: {"x": 0.5, "y": 0.1}
+            on_release: root.sortear(participantes.text)
+
+
+
